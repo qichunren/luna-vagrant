@@ -13,6 +13,7 @@
 ```
 git clone git@git.g77k.com:qichunren/luna-vagrant.git
 cd luna-vagrant
+vagrant box add precise32 http://files.vagrantup.com/precise32.box # 下载box，它是一个VirtualBox虚拟机导出的文件，版本是Ubuntu 12.04 LTS
 vagrant up # 就启动了作为开发的VirtualBox虚拟机了
 ```
 
