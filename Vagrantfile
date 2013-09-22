@@ -10,7 +10,14 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # please see the online documentation at vagrantup.com.
 
   # Every Vagrant virtual environment requires a box to build off of.
-  config.vm.box = "precise32"
+
+  config.vm.define "fs" do |web|
+    web.vm.box = "precise32"
+  end
+
+  config.vm.define "linphone" do |web|
+    web.vm.box = "precise32"
+  end
 
   # The url from where the 'config.vm.box' box will be fetched if it
   # doesn't already exist on the user's system.
@@ -39,6 +46,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # the path on the guest to mount the folder. And the optional third
   # argument is a set of non-required options.
   # config.vm.synced_folder "../data", "/vagrant_data"
+  # 将本机的luna-vagrant项目所在的目录Mount到虚拟机中的/code位置，二者实时同步
   config.vm.synced_folder "../", "/code"
 
   # Provider-specific configuration so you can fine-tune various
@@ -74,11 +82,12 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # #               Managed by Puppet.\n"
   # # }
   #
-  config.vm.provision :puppet do |puppet|
-    puppet.manifests_path = "puppet_manifests"
-    puppet.manifest_file  = "default.pp"
-    puppet.options = "--verbose --debug"
-  end
+  config.vm.provision "shell", path: "scripts/prepare.sh"
+#  config.vm.provision :puppet do |puppet|
+#    puppet.manifests_path = "puppet_manifests"
+#    puppet.manifest_file  = "default.pp"
+#    puppet.options = "--verbose --debug"
+#  end
 
   # Enable provisioning with chef solo, specifying a cookbooks path, roles
   # path, and data_bags path (all relative to this Vagrantfile), and adding

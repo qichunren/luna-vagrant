@@ -17,6 +17,9 @@ vagrant box add precise32 http://files.vagrantup.com/precise32.box # 下载box�
 vagrant up # 就启动了作为开发的VirtualBox虚拟机了
 ```
 
+自己的工作目录（就是luna-vagrant项目的上一层项目）是实时与虚拟机中的/code目录保持同步。
+luna-vagrant目录是实时与虚拟机中的/vagrant目录保持同步。
+
 ## 常用命令
 
 ```
@@ -24,9 +27,9 @@ vagrant up  # 启动虚拟机
 vagrant ssh # ssh登录机器
 vagrant halt # 关闭虚拟机
 vagrant destory # 删除虚拟机
+vagrant status # 显示虚拟机状态
 ```
 
-      
-      
-            
-      
+
+
+
