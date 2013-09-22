@@ -15,8 +15,8 @@ sudo apt-get -y install  postgresql libpq-dev
 sudo -u postgres psql -c "create user luna with password 'luna';"
 sudo -u postgres psql -c "create database luna_production owner luna;"
 
-sudo echo "host    all all 0.0.0.0/0 md5" > /etc/postgresql/9.1/main/pg_hba.conf
-sudo echo "listen_addresses='*'" > /etc/postgresql/9.1/main/postgresql.conf
-sudo service postgres restart
+sudo echo "host    all all 0.0.0.0/0 md5" >> /etc/postgresql/9.1/main/pg_hba.conf
+sudo echo "listen_addresses='*'" >> /etc/postgresql/9.1/main/postgresql.conf
+sudo service postgresql  restart
 
 sudo apt-get -y install ruby1.9.3
