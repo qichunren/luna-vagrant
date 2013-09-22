@@ -20,3 +20,8 @@ sudo echo "listen_addresses='*'" >> /etc/postgresql/9.1/main/postgresql.conf
 sudo service postgresql  restart
 
 sudo apt-get -y install ruby1.9.3
+
+# cd /code
+# wget http://c2h2pro.3322.org:81/lunafs-release/lunafs-with-sound-release_2-20130918.1140GIT805732e939664f584a736544b28cf23228198fee_amd64.deb
+# sudo dpkg -i http://c2h2pro.3322.org:81/lunafs-release/lunafs-with-sound-release_2-20130918.1140GIT805732e939664f584a736544b28cf23228198fee_amd64.deb
+# export http_proxy=10.0.1.45:1078

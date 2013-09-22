@@ -30,6 +30,11 @@ vagrant destory # 删除虚拟机
 vagrant status # 显示虚拟机状态
 ```
 
+## FAQ
+
+1. 怎么样添加box?
+  vagrant box add precise64 http://files.vagrantup.com/precise64.box
+
 
 
 
