@@ -1,2 +1,3 @@
 .idea/
-.vagrant/machines/default/virtualbox/
+.vagrant/machines/
+.DS_Store

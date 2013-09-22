@@ -13,10 +13,12 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.define "fs" do |web|
     web.vm.box = "precise32"
+    web.vm.provision "shell", path: "scripts/fs_prepare.sh"
   end
 
   config.vm.define "linphone" do |web|
     web.vm.box = "precise32"
+    web.vm.provision "shell", path: "scripts/linphone_prepare.sh"
   end
 
   # The url from where the 'config.vm.box' box will be fetched if it
@@ -82,7 +84,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # #               Managed by Puppet.\n"
   # # }
   #
-  config.vm.provision "shell", path: "scripts/prepare.sh"
+
 #  config.vm.provision :puppet do |puppet|
 #    puppet.manifests_path = "puppet_manifests"
 #    puppet.manifest_file  = "default.pp"
