@@ -11,9 +11,9 @@
 3. 进行自己平时的工作目录，执行
 
 ```
-git clone git@git.g77k.com:qichunren/luna-vagrant.git
+git clone git@github.com:qichunren/luna-vagrant.git
 cd luna-vagrant
-vagrant box add precise32 http://files.vagrantup.com/precise32.box # 下载box，它是一个VirtualBox虚拟机导出的文件，版本是Ubuntu 12.04 LTS
+vagrant box add precise64 http://files.vagrantup.com/precise64.box # 下载box，它是一个VirtualBox虚拟机导出的文件，版本是Ubuntu 12.04 LTS 64位
 vagrant up # 就启动了作为开发的VirtualBox虚拟机了
 ```
 
